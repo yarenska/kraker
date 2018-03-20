@@ -38,7 +38,7 @@ if __name__ == '__main__':
     '''
     plaintext = "I like chocolate and ice cream.." #i made that up to see whether my algorithm works or not
     ciphertext = CBC_encrypt(plaintext,"YELLOW SUBMARINE",("0" * 16)) #you can encrypt
-    back_plaintext = CBC_decrypt(ciphertext,"YELLOW SUBMARINE",("0" * 16)) #you can decrpyt back
+    back_plaintext = CBC_decrypt(ciphertext,"YELLOW SUBMARINE",("0" * 16)) #you can decrypt back
     if back_plaintext != plaintext:
         raise Exception("Couldn't convert to plaintext back.")
     '''
