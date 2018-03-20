@@ -1,5 +1,6 @@
 from Crypto.Cipher import AES
 from Crypto.Util.strxor import strxor
+import base64
 
 def getBlocks(line, n):
     return [line[i:i+n] for i in range(0, len(line), n)]
@@ -34,14 +35,8 @@ def CBC_encrypt(plaintext,key,IV):
     return reduce(lambda x,y:x+y, ciphertext)
 
 if __name__ == '__main__':
-    plaintext = "I like chocolate and ice cream.." #i made that up to see whether my algorithm works or not you will do
-                                                   #plaintext = base64.b64decode(open('10.txt','r').read())
-    ciphertext = CBC_encrypt(plaintext,"YELLOW SUBMARINE",("0" * 16))
-    back_plaintext = CBC_decrypt(ciphertext,"YELLOW SUBMARINE",("0" * 16))
-    
-    if(back_plaintext != plaintext):
-        raise Exception("Couldn't go back to plaintext..")
-    else:
-        print("Plaintext: " + plaintext)
-        print("Encrypted: " + ciphertext)
-        print("Decrypted: " + back_plaintext)
+    #plaintext = "I like chocolate and ice cream.." #i made that up to see whether my algorithm works or not you will do
+    #ciphertext = CBC_encrypt(plaintext,"YELLOW SUBMARINE",("0" * 16)) #you can encrypt and decrypt
+    plaintext = base64.b64decode(open('10.txt','r').read())
+    back_plaintext = CBC_decrypt(plaintext,"YELLOW SUBMARINE",("0" * 16))
+    print(back_plaintext)
