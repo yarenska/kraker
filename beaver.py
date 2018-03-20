@@ -17,7 +17,9 @@ if __name__ == '__main__':
     plaintext = plaintext.replace(" ", "")
     left = ""
     right = ""
-
+    ciphertext = beaver_code(plaintext, left, right)
+    print(ciphertext)
+    
     '''
     beaver_code is for both encryption and decryption.
     After many trials you can find your plaintext back.
