@@ -19,7 +19,7 @@ if __name__ == '__main__':
     right = ""
 
     '''
-    beaver_code is for both decryption and encryption.
+    beaver_code is for both encryption and decryption.
     After many trials you can find your plaintext back.
     '''
     for i in range(len(plaintext)):
