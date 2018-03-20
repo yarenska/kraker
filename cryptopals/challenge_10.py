@@ -35,8 +35,13 @@ def CBC_encrypt(plaintext,key,IV):
     return reduce(lambda x,y:x+y, ciphertext)
 
 if __name__ == '__main__':
-    #plaintext = "I like chocolate and ice cream.." #i made that up to see whether my algorithm works or not you will do
-    #ciphertext = CBC_encrypt(plaintext,"YELLOW SUBMARINE",("0" * 16)) #you can encrypt and decrypt
+    '''
+    plaintext = "I like chocolate and ice cream.." #i made that up to see whether my algorithm works or not
+    ciphertext = CBC_encrypt(plaintext,"YELLOW SUBMARINE",("0" * 16)) #you can encrypt
+    back_plaintext = CBC_decrypt(ciphertext,"YELLOW SUBMARINE",("0" * 16)) #you can decrpyt back
+    if back_plaintext != plaintext:
+        raise Exception("Couldn't convert to plaintext back.")
+    '''
     plaintext = base64.b64decode(open('file_CBC.txt','r').read())
     back_plaintext = CBC_decrypt(plaintext,"YELLOW SUBMARINE",("0" * 16))
     print(back_plaintext)
