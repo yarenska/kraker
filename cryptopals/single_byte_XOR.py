@@ -40,4 +40,4 @@ def detect_key_decrypt(text):
    
 if __name__ == '__main__':
     hex_text = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
-    print(detect_kedecrypt(hex_text.decode('hex')))
+    print(detect_key_decrypt(hex_text.decode('hex')))
