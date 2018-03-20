@@ -6,7 +6,6 @@ ip = IP(dst='10.471.52.38')
 
 open_ports = []
 
-
 for portnum in range(65535):
 
     syn = TCP(sport=RandShort(), dport=portnum, flags='S')
