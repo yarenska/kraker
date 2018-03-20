@@ -24,7 +24,7 @@ def score(t):
     return score
    
 
-def detect_key(text):
+def detect_key_decrypt(text):
     w, h = 34, 256
     results = [[" " for x in range(w)] for y in range(h)] 
     for i in range(0,256):
@@ -40,4 +40,4 @@ def detect_key(text):
    
 if __name__ == '__main__':
     hex_text = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
-    print(detect_key(hex_text.decode('hex')))
+    print(detect_kedecrypt(hex_text.decode('hex')))
