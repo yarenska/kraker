@@ -35,6 +35,6 @@ if __name__ == '__main__':
     text = "YELLOW SUBMARINE"
     paddedtext = PKCS_7(text,20) 
     unpadded = isValidPKCS_7(paddedtext) #or "ICE ICE BABY\x05\x05\x05\x05" or "ICE ICE BABY\x01\x02\x03\x04".
-                                         #they are not correct thus even before coming to print part of the main function,
+                                         #they are not correct, so even before coming to print part of the main function,
                                          #it will throw an exception at isValidPKCS_7
     print(unpadded)
