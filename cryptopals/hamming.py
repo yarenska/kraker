@@ -7,16 +7,6 @@ def xor (a,b):
         XORed.append(hex(XORed_value)[2:])
     return ''.join(XORed)
 
-def toHex(s):
-    lst = []
-    for ch in s:
-        hv = hex(ord(ch)).replace('0x', '')
-        if len(hv) == 1:
-            hv = '0'+hv
-        lst.append(hv)
-    
-    return reduce(lambda x,y:x+y, lst) #not list but string
-
 def hamming(text1,text2):
     count = 0
     my_hexdata = xor(text1, text2)
